@@ -194,6 +194,8 @@ async function decodeTorrentFile (torrent) {
   result.lastPieceLength = ((lastFile.offset + lastFile.length) % result.pieceLength) || result.pieceLength
   result.pieces = splitPieces(torrent.info.pieces)
 
+  result.source = torrent.source
+  
   return result
 }
 
